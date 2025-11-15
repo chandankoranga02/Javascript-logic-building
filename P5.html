@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+
+        // Below code is for logic building only , because it is low level style . Not recommendef or js 
+
+
+
+
+        let name = 'chandan';
+        let result = "";            // Humne string empty define ki taki , jab iteration karenge toh first space milee 
+
+        for (let i = (name.length) - 1; i >= 0; i--) {
+            result = result + name[i];          // This is like , result =  '' + n; , then result = n + a;
+                                                // then result = na +d; , and soo on like this 
+        }
+
+        console.log("Value is ", result);
+
+
+
+        // For JS style 
+
+        let value = "chandan";
+        let Result = value.split("").reverse().join(""); // split → reverse → join
+        console.log(Result);
+
+        // We use , "" inside brackets because , if we dont use, string will break for split like an single element not like charecter
+        //           "" if not used then , [mena] only 
+        //           "" if used then , ['m','e','n','a'] like this 
+  
+        let name2 = 'mena';
+
+        let result2 =  name2.split("");
+        console.log(result2); 
+
+        result2 = result2.reverse("");
+        console.log(result2);
+
+        result2 = result2.join("");
+        console.log(result2);
+
+
+        
+
+    </script>
+</body>
+
+</html>
