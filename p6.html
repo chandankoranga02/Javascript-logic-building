@@ -8,6 +8,8 @@
     <script>
      // we have to calculate factorial of number 
 
+// Method 1 : using recursion method
+
      let number = Number(prompt("Enter number to continue :"));
 
      function factorial(a){
@@ -20,7 +22,22 @@
 
      console.log(factorial(number));
 
+// Method 2 : using loop
 
+     function recursion_using_loop(n){
+        let result = 1;
+
+        for(let i =1; i<=n; i++){
+            result = result * i;
+        }
+
+        return result;
+     }
+
+
+     console.log(recursion_using_loop(5));
+
+    
     </script>
 </body>
 </html>
