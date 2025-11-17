@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // We have take a number , then calculate its sum of digits .
+
+        let num = prompt("Enter a numnber to calulate sum of digits");
+
+        function digitSum(n) {
+            if (!isNaN(Number(n))) {
+                let sum = 0;
+                for (let i = 0; i < n.length; i++) {
+                    
+                    sum = sum + Number(n.at(i));
+                }
+                 return sum;
+            }
+        }
+
+        
+        console.log(digitSum(num));
+
+        // Note : n.at(i) this give string only , not number , so better to make it number first
+        // If(Number(n)) ismain ek problem hai, jaise agar main 0 bhi mix karunga apne number main toh, muje flase return karega , kyuki JS me 0 hamesha falsy hota hai, chahe vo number ho ya string se convert hua ho.
+        // Isliye hum Number se phele,       !isNaN()        use karte hai 
+        // “Kya yeh value number ban sakti hai?”
+        //→ Agar haan, toh true. 
+
+    </script>
+</body>
+
+</html>
