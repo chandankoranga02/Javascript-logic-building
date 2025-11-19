@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // We have to check Wheather a number is piledrome or not .
+
+        // Method 1 : 
+
+
+        let word = prompt("Enter a word to check it is pelidrome or not");
+
+        function pelidromechecker(string) {
+
+            let reversesplitstring = string.split('').reverse('').join('');
+
+            if (string === reversesplitstring) {
+                console.log("It is pelidrome word")
+            }
+            else {
+                console.log("It is not pelidrome word");
+            }
+        }
+
+        pelidromechecker(word);
+
+        // Kabhi bhi hum if ke andar direct , array ya object comapre nahi kar sakte hai , like , 
+
+        // let splitedstring = string.split(''); 
+        // let reversestring = splitedstring.reverse('');
+        //  if (splitedstring === reversestring) {   yahan iss tarike se direct array compare nahi karte hai , kyu array if jo hai bo array ko object ki tarah treat kar raha hai , toh unke addrees(reference) comapre hunge na ki unke andar ki value ya content
+        //      console.log("It is pelidrome word")
+        // }
+
+
+       // Method 2 : 
+
+       
+
+
+
+    </script>
+</body>
+
+</html>

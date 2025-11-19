@@ -1,14 +1,36 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
-       
+          // Qus:  Calculate, maximum and biggest number in an given array given you dont have to use math.max and array sorting , by using pure logic
+
+        let values = [1, 2, 5, 9, 6];
+        let maxvalue = values[0];
+
+        for (let i = 0; i < values.length; i++) {
+
+            if (values[i] >= maxvalue) {
+                
+                 maxvalue = values[i];
+                 // Yahan par , Maxvalue apne aap update ho rahi hain aur jaise hee if conditoin true hoti hai tab , maxvalue fir vo agle index ke sath compare horahi hai, fir purani assume value nahi ho rahi hai compare
+            }
+
+        }
+
+        console.log("SO biggest number in an array is ", maxvalue);
+
+
+
+
+
 
     </script>
 </body>
-</html>
+</html>    
