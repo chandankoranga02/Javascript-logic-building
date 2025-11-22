@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Ques:  I have to calculate the factors of a numbers 
+
+        let factor = prompt("Enter a number to calculate its factor ");
+
+        function factorCalculator(num) {
+
+            let result = [] ;
+            for (let i = 1; i < num; i++) {
+
+                if (num % i === 0) {
+                    result.push(i);
+                }
+            }
+
+            return result;
+        }
+
+        console.log(factorCalculator(Number(factor)));
+
+    </script>
+</body>
+
+</html>
+
+// result.push(i) yeah ek array method hai , iss kya hota hia ki , jo i (ya kuch aur values) ki values hoti hian vo result naam ke variable main store hoti hai, array form hai last say 
+// Dyan dene ki baat yeah hai ki , array form hona chahye like 
+// let result = [];                ---> accepted 
+// let result ; or let result[];   ---> not accepted 
+// push() = array ke end me item ghusa do 🤝

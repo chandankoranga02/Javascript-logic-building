@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let value = prompt("Enter the value , for which you want to print vowels and consonents");
+
+        function vowelscounter(v) {
+
+            let count = 0;
+            let vowels = ['a', 'e', 'i', 'u', 'o'];
+            for (let i = 0; i < v.length; i++) {
+                if (vowels.includes(v[i])) {
+                    count++;
+                }
+            }
+            console.log("we have total vowels: ", count);
+            return count;
+
+        }
+        
+        function consonentscounter(c) {
+            let count = 0;
+            let vowels = ['a', 'e', 'i', 'u', 'o'];
+            for (let i = 0; i < c.length; i++) {
+
+                if (!vowels.includes(c[i])) {
+                    count++;
+                }
+            }
+            console.log("we have total consonents: ", count);
+            return count;
+
+        }
+
+        vowelscounter(value);
+        consonentscounter(value);
+
+// vowels.includes(v[i]) ka matlab:
+// "Check karo ki vowels wale array ke andar v[i] e.g (a , c , i ,e ) wala character exist karta hai ya nahi."
+// v[i] ka matalb iss time pe yeah nahi ki , v[i] = puri string value hogi, sirf uss index pe jo cherectar match hoga 
+
+// vowels.includes(v[i]) agr match karega toh , ( true ) hoga nahi karega toh  (false)
+
+    </script>
+</body>
+
+</html>

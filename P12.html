@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let base = prompt("Enter base number :");
+        let power = prompt("Enter power for exponent: ");
+
+
+        function exponent(b , p){
+
+            let result = 1;
+
+            for (let i = 0; i < p; i++) {
+              
+                 result = result * b;          // It is like , base(b) = 2 nd power(p) = 5
+                                               // result = 1 * 2 ;i =0 ends, result becomes = 2;
+                                               // result = 2 * 2; i =1 ends , result becomes = 4;
+                                               // result = 4 * 2; i =2 ends , result becomes = 8;
+                                               // result = 8 * 2; i =3 ends , result becomes = 16;
+                                               // result = 16 * 2;i =4 ends ,result becomes = 32;
+
+                                               // loops ends , reuslt updated and becomes = 32
+                
+            }
+
+            console.log(result);
+        }
+
+        exponent(base,power);
+
+
+        // Method : 2
+      
+        // Math.pow(base, exponent);
+
+        let result = Math.pow( 2 , 2);
+        console.log("2 the power 3 is", result);
+
+        // Trying to create 3 levels of power , like power ki power ki power , 
+
+
+        function powertopower(b1 , p1 , p2) {
+            let semiresult = 1;
+            for (let i = 0; i < p2; i++) {
+                
+                semiresult = semiresult * p1;
+            }
+
+            let finalresult= 1;
+            for (let i = 0; i < semiresult; i++) {
+                
+                finalresult = finalresult * b1;
+                
+            }
+
+            console.log(finalresult);
+        }
+   
+        powertopower(2 , 2 ,2);
+
+
+        // Clean , clear and reusable professional accepted method to do 
+
+
+        function  power(Base, expo) {
+            let result = 1;
+            for(let i=0; i<expo; i++){
+                result = result * Base;
+            }
+            return result;
+
+            function powertopower(b , p1 , p2) {
+                let semiresult1 = power(p1 ,p2);
+                  let finalresult1 = power(b , semiresult1);
+            }
+
+            return finalresult1;
+        }
+
+        console.log(powertopower(2 , 2 ,2));
+
+    </script>
+</body>
+</html> 
