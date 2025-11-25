@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+      // Qus : Write a program for simple interest caclculator ?
+
+        let principalamount = Number(prompt("Enter the Principal Amount :"));
+        let time = Number(prompt("Enter time duration in Yrs :"));
+        let interestRate = Number(prompt("Set the Interest Rate for Loan"));
+
+        function simpleInterestCalculator(p , t, i) {
+            console.log("Principal Amount :", p);
+            console.log("Time :", t);
+            console.log("Interest Rate : ", i,"%");
+
+            let formula = (p * t* i) / 100;
+            console.log("So simple interest on your Loan amount is : ", formula);
+
+            console.log("Total Loan amount after ", t, "time with ", i,"% as interest rate is ",(p + formula));
+            
+        }
+
+        simpleInterestCalculator(principalamount , time , interestRate);
+
+
+    </script>
+</body>
+</html>

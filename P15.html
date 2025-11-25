@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+         let arr = [2, 3, 5, 6, 4 , 8];
+
+        function avgcalculator(a) {
+
+                let summation = 0;
+
+                for (let i = 0; i < a.length; i++) {
+
+                    summation = summation + a[i];
+
+                }
+
+                let avg =  summation / a.length;
+                console.log("The summation of an array :", avg)
+
+                return summation;
+
+        }
+
+
+
+        avgcalculator(arr);
+
+
+
+
+// FOR LOOP कब?
+// 👉 Jab tumhe pehle se pata ho kitni baar loop chalana hai
+
+// Example:
+// Array ke 10 elements print karne hain
+// User bolta hai “5 values daalo”
+// Count-based iterations
+
+
+
+
+
+// WHILE LOOP कब?
+// 👉 Jab bar-bar repeat karna hai but number of repeats pata nahi
+// Condition se control hota hai. Jab tak condition true hai, tab tak chalega.
+
+// Examples:
+// “User stop bole tab tak input lo”
+// “Login sahi password tab tak puchho jab tak correct na ho”
+// “Game over nahi hota tab tak game chale”
+
+
+// “Kitni baar?” — Agar jawab number hai → FOR
+// “Jab tak?” — Agar jawab condition hai → WHILE
+
+    </script>
+</body>
+
+</html>

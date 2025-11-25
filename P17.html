@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Question : Here we are makinga function to check Prime number Status .
+
+        let number = Number(prompt("Enter a number to continue :"));
+
+        function PrimeNumberChecker(n) {
+
+            if (n === 1 || n === 0) {
+                console.log(n, "is not prime number");
+                return ;
+            }
+
+            let checker = true;
+
+            for (let i = 2; i < n; i++) {
+
+                if (n % i === 0) {
+                    checker = false;
+                    break;
+                }
+            }
+
+            if (checker) {
+                console.log(n, "is prime number");
+            }
+            else  {
+                console.log(n, "is not prime number");
+            }
+        }
+
+
+        PrimeNumberChecker(number);
+
+
+        // exit(0);  aur  break  same cheez nahi hai. Yeh sabse bada misconception hota hai beginners ka.
+    
+
+        // Cheez     ||	  Kya todti hai	               ||    Baaki code?
+        // ------------------------------------------------------------------------------------------
+        // break;	 ||   Sirf current loop	           ||    Loop ke baad ka code aage chal jayega
+        // exit(0);	 ||   Pura program turant band	   ||    Kuch bhi aage nahi chalega
+ 
+
+    </script>
+</body>
+
+</html>
