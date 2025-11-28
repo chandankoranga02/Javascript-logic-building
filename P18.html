@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  We have to calculate number of words in sentence 
+
+        let word = prompt("Enter a word to continue:");
+        let splitted = word.trim().split(' ');     // If we give space between ' ' then , word will be counted as single element    ------- 'Space'
+        // if we dont give space betweeen '', then word will counted as sereis of charector 
+
+        const final =splitted.filter((element) => element !==" ");
+
+        function counter(w) {
+
+            let count = 0;
+            for (let i = 0; i < w.length; i++) {
+                count++;
+            }
+
+            console.log("The number of words :", count);
+            return count;
+
+        }
+
+        counter(final);
+
+
+        //   Above is code of JS recommended style 
+
+        function counter2(w2) {
+
+            let i = 0;
+            let count = 0;
+            while (i < w2.length) {
+                if (w2[i] === ' ') {
+                    count++;
+                }
+                i++;                                     // agar hum while loop mian kabhi condition use nahi karenge , stop karne ke liye varna while loop infinite ban jayega 
+            }
+            console.log("Number of words :", count+1);
+            return count +1;
+
+        }
+
+        counter2(word);
+
+// Above and below are low style using for and while loop
+
+        function counter3(w3) {
+            let count =0;
+
+            for (let i = 0; i < w3.length; i++) {
+
+                if (w3[i] === ' ') {
+                    count++;
+                }
+            }
+            console.log("Number of words in sentence : ", count+1);
+            return count+1;
+        }
+
+        counter3(word);
+
+        // trim ka use yeah hai ki, ending and starting ki space remove kar sakeee 
+        // space space space chandan singh koranga space space ----- without trim output : .    chandan singh koranga  .
+        // space space space chandan singh koranga space space ----- with trim output : .chandan singh koranga.
+
+        // Note : trim sirf starting or ending ki space remove karta hai , sentence ke beech vali space ko remove kar nahi karta 
+
+
+        // filter ka kaam yeah hota hai ki , ki filter ke andar jo condition diee hai usko chod kar sab print karo, 
+        // Suppose maine condition di hain, char => char !=" ", toh hoga yeah ki space jitni bhi hogi jo humne extra add ki hogi , means 2nd 3rd 4th consecutive vo sab hat jayegi
+
+    </script>
+</body>
+
+</html>
