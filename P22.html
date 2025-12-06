@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let number = prompt("Enter a number to continue ");
+
+        function fizbuz(n) {
+
+            let store =[];
+            for (let i = 1; i < n+1; i++) {
+
+                if(i % 15 === 0){
+                    store.push("FizzBuzz");
+                }
+
+               else if (i % 3 === 0) {
+                    store.push("Fizz");
+                }
+
+                else if (i % 5 === 0) {
+                    store.push("Buzz");
+                }
+
+                else {
+                    store.push(i);
+                }
+                
+            }
+
+            console.log(store);
+        }
+
+        fizbuz(Number(number));
+
+
+        // store.push(console.log("value")); yeah galat tarika hai , undefined aayega  kyuki console.log sirf print ke liye hota hia value return karne ke liye nahi
+        // store.push("value"); yeah sahi tarika hai , isse store naa ke array main value naam ka string return and save hoga.
+
+    </script>
+</body>
+</html>

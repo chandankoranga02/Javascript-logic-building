@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+      let word = prompt("Enter sentence to continue");
+
+      
+
+    function characterChecker(sentence){
+        let object = {};
+        for (let i = 0; i < sentence.length; i++) {
+        
+            if (!object[sentence[i]]) {
+                object[sentence[i]] = 0;
+            }
+            object[sentence[i]]++;   // object[sentence[i]] = object[sentence[i]] + 1;
+
+      }
+      console.log(object);
+    }
+
+      characterChecker(word);
+
+
+      // let object ={};
+      // object.a = 1; or object[a] = 1;
+      // output : {a: 1}
+
+    </script>
+</body>
+</html>

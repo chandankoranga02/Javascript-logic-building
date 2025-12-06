@@ -1,0 +1,84 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let number = prompt("Enter a Number to continue :");
+
+        function cubicpower(n) {
+            let cubicpower = 1;
+            for (let i = 0; i < 3; i++) {
+                cubicpower = cubicpower * n;
+            }
+            return cubicpower;
+        }
+
+
+        function armstrongChecker(n) {
+
+            let sum = 0;
+            for (let i = 0; i < n.length; i++) {
+                sum = sum + cubicpower(Number(n[i]));    // Number(n[i]) Converting string "1" to 1;
+            }
+
+            if (Number(n) === sum) {
+                console.log("This number is Armstrong : that is  ", sum);
+            }
+            else {
+                console.log("Sorry this number is not armstrong : ", sum);
+            }
+            return sum;
+
+
+        }
+
+        cubicpower(number);
+        armstrongChecker(number);
+
+ // The above methods has some loophole and mistakes , like it only defined for 3 digit number and only for Cubic power .
+
+    // Below is Js style Recommended algorithim and above is low level , C++/C style algo
+
+        function armstrong(n) {
+
+            let original= n;                        // Dekho jab hum , niche n ki value while looop mian update karte hai tab , vahan ek time ke baad n ki value n =0 ho jati hai 
+                                                    // toh n ki original value preserve rakhne ke liye hun n ko original main save karayenge aur fir if else main use karenge last main 
+                                                    // varna , sum === 0 always hoga agar hum , n ki value save nahi karayenge toh
+
+            let digits = [];
+            while (n>0){                           // Yahan humne condition lagae ki , n ki value jab tak 0 se badi hai toh , niche code mai n ki value update hote hote , 0 se kam hogi ek time pe ,, toh tab loop ruk jayegi 
+                let lastdigit = n % 10;            // Yahan lastdigit ki value , 3 huee 
+                n = Math.floor(n/10);              // Ab n ki value nearest main , update hogaeee 
+                digits.push(lastdigit);            // digits naaam ke array main push karo lastdigit ke array.  
+            }
+
+            let length = digits.length;
+            let sum =0;
+            digits.forEach(d => {
+                sum =  sum + Math.pow(d, length);
+            })
+
+
+            if(sum == original){
+                console.log("This number is armstrong", sum);
+            }
+            else{
+                console.log("This number is not arstrong",sum);
+            }
+
+        }
+
+
+        armstrong(Number(number));
+
+
+    </script>
+</body>
+
+</html>

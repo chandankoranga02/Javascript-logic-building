@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log('a'.charCodeAt(0));    // ASCI values of a        'string'.charCode(0)
+        console.log('z'.charCodeAt(0));
+
+        let value = prompt("Enter the sentence to check its order ");
+        value = value.toLowerCase().split('');
+
+
+        function alphabaticalOrder(s) {
+            for (let i = 0; i < s.length - 1; i++) {                   // See here , we will not use s.lenth for comparing , we will use s.length-1 instead because, [i+1] is undefined for last index 
+
+                if (s[i].charCodeAt(0) > s[i + 1].charCodeAt(0)) {    // Agar mai < yeah use karunga, toh it means : “Does the string contain at least one increasing alphabetical pair?”
+                    return console.log("alphbatical order is not correct");
+                }
+            }
+
+            return console.log("alphbatical order is  correct");         // passed all checks → fully sorted
+        }
+
+        alphabaticalOrder(value);
+        // using   s.length -1        instead of      s.length only
+        // i=0 → compare s[0] & s[1] ✔
+        // i=1 → compare s[1] & s[2] ✔
+        // stop → never reaches s[3] ❌ (good, because it doesn't exist)
+
+
+    </script>
+</body>
+
+</html>
