@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let stringone = prompt("Enter word one ");
+        let stringtwo = prompt("Enter word two ");
+
+        function anagramchecker(a, b) {
+
+            let count = 0;
+
+            for (let i = 0; i < a.length; i++) {
+
+                for (let j = 0; j < b.length; j++) {
+
+                    if (a[i] === b[j]) {
+                        count++;
+                    }
+                }
+            }
+
+            if (count === b.length && count === a.length) {
+                console.log("Boths strings are anagram");
+            }
+
+            else {
+                console.log("Both string are not anagram");
+            }
+
+            return count;
+
+        }
+
+        anagramchecker(stringone, stringtwo);
+
+        // JS recommended method
+
+        function anagram(a, b) {
+
+            if (a.length === b.length) {
+
+                let achar = {};
+                for (let char of a) {
+                    if (!achar[char]) {
+                        achar[char] = 0;          // Dekho jab yahan pe condition follow huee , toh object ke andar character ban gaye aur unki vlaue zero pe initiliaze hogaye 
+                    }
+                    achar[char]++;                // Suppose ab jab ek baar vo character dubra repeat hunge toh , toh unki value bad jayegi jitne baad vo present hunge
+                }
+
+                let bchar = {};
+                for (let char of b) {
+                    if (!bchar[char]) {
+                        bchar[char] = 0;
+                    }
+                    bchar[char]++;
+                }
+                console.log(achar);
+                console.log(bchar);
+
+                for (let key in achar) {
+                    if (achar[key] !== bchar[key]) {
+                        console.log("Both the strings are not anagram");
+                        return false;
+                    }
+                }
+                console.log("Both the strings are anagram");
+                return true;
+
+
+
+
+            }
+            else {
+                console.log("Both strings are not anagram");
+            }
+        }
+
+
+        anagram(stringone, stringtwo);
+
+        // forof loop means , for (let char of a){} ---> it means , char of a ko , char ek temporary variable hai like  , i in forloop, means , let charector of a , har baaar iteration hoga , each element se hoke jayega 
+
+        // forin loop means, for (let key in a ){} ---> it means ,  key in a ko, key ek temporary varibale hai , kuch aur bhi le sakte hai, iss hota hai yeah ki ki object/array ke anndar ke elements ko index by index return karta hai
+        // exmaple ek object , uske andar students hai 10, per student 3 data aviable, hai toh key, har ek student key hai object ke andar, agar student ki detials hai toh , jo student key hai , vo hee object bhi hai , uski bhi key hogi
+
+        // let key in c(object / array)
+
+
+        // | Loop Type  | Output              | Best use case                       | Where it fails                        |
+        // | ---------- | ------------------- | ----------------------------------- | ------------------------------------- |
+        // | **for**    | index based control | arrays, numeric loops, full control | long syntax, object traversal complex |
+        // | **for-of** | element values      | strings, arrays                     | objects ke liye direct usable nahi    |
+        // | **for-in** | keys/index          | objects & property traversal        | array values direct nahi milte        |
+
+
+    </script>
+</body>
+
+</html>

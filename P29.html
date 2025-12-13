@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let password = prompt("Enter a password to continue");
+        // using forof loop
+        function passwordchecker(p) {
+            if (p.length >= 8) {
+
+                let lowercaseExits = "abcdefghijklmnopqrstuvwxyz";
+                let UppercaseExits = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let numbersExists = "0123456789";
+                let specialcharExists = "@#$%&!";
+
+                let lowercase = false;
+                let uppercase = false;
+                let Numbers = false;
+                let specialchar = false;
+
+                for (let char of p) {
+                    if (lowercaseExits.includes(char)) {
+                        lowercase = true;
+                    }
+
+                    else if (UppercaseExits.includes(char)) {
+                        uppercase = true;
+                    }
+
+                    else if (numbersExists.includes(char)) {
+                        Numbers = true;
+                    }
+
+                    else if (specialcharExists.includes(char)) {
+                        specialchar = true;
+                    }
+                }
+
+                if (lowercase && uppercase && Numbers && specialchar) {
+                    console.log("Password is strong");
+                }
+
+                else {
+                    console.log("Password is not strong");
+
+                    if (!lowercase) { console.log("Please includes at least one lowercase") };
+                    if (!uppercase) { console.log("Please includes at least one uppercase") };
+                    if (!Numbers) { console.log("Please includes at least one Number") };
+                    if (!specialchar) { console.log("Please includes at least one SpecialCharacter") };
+                }
+
+            }
+
+            else {
+                console.log("You must have minimum 8 length ");
+            }
+        }
+
+        passwordchecker(password);
+
+
+
+        // NOw using for loop
+
+        function passwordchecker2(p) {
+            if (p.length >= 8) {
+
+                let lowercaseExits = "abcdefghijklmnopqrstuvwxyz";
+                let UppercaseExits = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let numbersExists = "0123456789";
+                let specialcharExists = "@#$%&!";
+
+                let lowercase = false;
+                let uppercase = false;
+                let Numbers = false;
+                let specialchar = false;
+
+                for (let i = 0; i < p.length; i++) {
+
+                    if (lowercaseExits.includes(p[i])) {
+                        lowercase = true;
+                    }
+
+                    else if (UppercaseExits.includes(p[i])) {
+                        uppercase = true;
+                    }
+
+                    else if (numbersExists.includes(p[i])) {
+                        Numbers = true;
+                    }
+
+                    else if (specialcharExists.includes(p[i])) {
+                        specialchar = true;
+                    }
+
+                }
+
+
+
+                if (lowercase && uppercase && Numbers && specialchar) {
+                    console.log("Password is strong");
+                }
+
+                else {
+                    console.log("Password is not strong");
+
+                    if (!lowercase) { console.log("Please includes at least one lowercase") };
+                    if (!uppercase) { console.log("Please includes at least one uppercase") };
+                    if (!Numbers) { console.log("Please includes at least one Number") };
+                    if (!specialchar) { console.log("Please includes at least one SpecialCharacter") };
+                }
+
+            }
+
+            else {
+                console.log("You must have minimum 8 length ");
+            }
+        }
+
+        passwordchecker2(password);
+
+
+
+
+    </script>
+</body>
+
+</html>

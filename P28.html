@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let number = prompt("Enter a number to continue");
+
+    function perfectNumberchecker(n) {
+        let sum =0;
+
+        for (let i = 1; i < n; i++) {
+            if (n % i === 0) {
+                console.log("The divisor  is : ", i);
+                sum = sum + i;
+            }
+        }
+        console.log("The sum of the number is :", sum);
+
+        if (n === sum) {
+            console.log(`Hey congratulation ${sum} is perfect number`);
+        }
+
+        else{
+            console.log("Sorry not Perfect Number , Try next ");
+        }
+
+        return sum;
+
+    }
+
+    perfectNumberchecker(Number(number));
+
+    </script>
+</body>
+</html>

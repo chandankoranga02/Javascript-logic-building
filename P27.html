@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        let matrixdata = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+
+        console.log(matrixdata);
+
+        function matrix(matrixdata) {
+            let rows = matrixdata.length;
+            let columns = matrixdata[1].length;
+
+            let transpose = [];
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < columns; j++) {
+                    console.log(matrixdata[i][j]);
+
+                    if (!transpose[j]) {
+                        transpose[j] = [];
+                    }
+                 
+                    transpose[j][i] = matrixdata[i][j];
+
+                }
+
+            }
+            
+            return transpose;
+        }
+
+        matrix(matrixdata);
+
+    </script>
+</body>
+
+</html>
