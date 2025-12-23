@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let random = Math.random();    // Dekho jo Math.random(); yeah hamara random number generate karta hai float form between 0 and 1, not includes 0 and 1 in this 
+        console.log(random);
+
+        let random1 = (Math.random() * 5);  // Now here Humne andar 5 se multiply kiaa iska matalb hai , Ab random number generate hoga between 0 and 5
+        console.log(random1);
+
+        let random2 = Math.floor((Math.random() * 10)); // Humne yaha math.floor(); ka use hai ki , jo random number generate hoga uska left side ke hightest round off karke present kare, like 4.7 then become 4, 3.2 become 3, -4.2 beocmes 5.
+        console.log(random2);
+
+        let min = 10;
+        let max = 40;
+        let random3 = Math.floor((Math.random() * (max -min)+ min));   // iska output [min, max) ke beech mai aayega 
+        console.log(random3);
+
+        // See how above one is working see Algo below : 
+
+        // jab hum normal math.random() se number generate karate hai 
+        // suppose output aaya : 
+        // 0 to 10 aaya  
+        // jab humne ismian add kiya , supose 5 bahar se tab new output be like 
+
+        // 0+5 to 10+5
+        // new and final output : 5 to 15 , after adding 5 to random number generator 
+
+
+
+
+
+    </script>
+</body>
+
+</html>

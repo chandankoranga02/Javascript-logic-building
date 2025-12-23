@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let sentence = prompt("Enter the sentence to continue");
+        let word = prompt("Enter a word to find its indexs in sentence");
+
+        function WordFinder(s, w) {
+
+            let count = [];
+            let value = s.indexOf(w);
+
+            while(value !== -1){
+               value = s.indexOf(w,value+1);
+               count.push(value);
+            }
+
+            count.pop('-1');
+            console.log(count);
+        }
+        WordFinder(sentence,word);
+
+        // sentence.IndexOf(word,position from which indexing search will start );
+        // .IndexOf(a,b); ek built in API call Array metthod , jo ki --- sentence main word search karta hai with konsa position se start karna hai-- 
+        
+        // Just like We use Push(); method , push method piche value add karta hai , .pop(); iska ulta hai vo end se remove karta hai 
+        // .pop(); is used to remove from end
+        // .push(); is used to add from end 
+
+
+
+    </script>
+</body>
+
+</html>

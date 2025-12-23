@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let dice = Number(prompt("Enter number of dices"));
+        let side = Number(prompt("Select No of sides of Dice : 4 or 6"));
+
+
+        function randomnumber(i){
+            let randomNumber = Math.floor((Math.random() * i ) + 1);
+            return randomNumber;
+        } 
+
+
+        function rollingDice(d, s) {
+            let result = [];
+
+            if (s === 4 || s === 6) {
+
+                    for (let i = 0; i < d; i++) {
+                       console.log(randomnumber(s));
+                    }
+
+                console.log(result);
+            }
+            else { alert("Enter the valid input ");}
+            return result;
+        }
+
+       rollingDice(dice,side);
+
+
+
+    
+
+
+    </script>
+</body>
+
+</html>

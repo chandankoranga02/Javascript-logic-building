@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let amount = prompt("Enter the Bill amount ");
+        let tippercent = prompt("Enter Tip percentage : 0% or 5% or 10% or 20%");
+
+
+
+        function TipCaclculator(a, t) {
+
+            let tipAmount = ((t / 100) * a);
+            let payable_amount = (a + tipAmount);
+
+            let INR = new Intl.NumberFormat("en-IN",{
+                style :"currency",
+                currency : "INR"
+            });
+
+            console.log("Bill amount : ", INR.format(a));
+            console.log("Tip amount : ", INR.format(tipAmount));
+            console.log("Payable amount : ", INR.format(payable_amount));
+        }
+
+        TipCaclculator(Number(amount), Number(tippercent));
+
+    </script>
+</body>
+
+</html>
