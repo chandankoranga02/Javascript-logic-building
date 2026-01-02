@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+        let randomNumber = Math.floor((Math.random() * 100) + 1);
+        console.log(randomNumber);
+
+
+        function game(r) {
+            let stoploop = true;
+            let counting = 0;
+            while (stoploop) {
+                let n = Number(prompt("Enter a Number Between 1 and 100 :"));
+                if (n >= 1 && n <= 100) {
+
+                    if (n === r) {
+                        alert("You guess correct Number"); stoploop = false;}
+                    else if (n > r) { alert("You are guessing larger number , Guess smaller Number");}
+                    else if (n < r) { alert("You are guessing Smaller number , Guess Larger Number");}
+                }
+             else { alert("Enter a number between 1 and 100 only"); } counting++;}
+             alert(`You have guess in ${counting} chances`);
+
+        }
+
+        game(randomNumber);
+
+    </script>
+
+</body>
+
+</html>

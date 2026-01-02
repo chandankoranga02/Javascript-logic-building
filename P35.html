@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let hour = prompt("Enter hour to set");
+        let minutes = prompt("Enter minutes to set");
+
+        function Alarmclock(h, m) {
+            const current = new Date();
+            const Alarmdate = new Date();
+            Alarmdate.setHours(h);
+            Alarmdate.setMinutes(m);
+
+            if (h >= 0 && h <= 23 && m >= 0 && m <= 59) {
+
+                if ((Alarmdate - current) > 0) {
+                    setTimeout(() => (
+                        alert("Alarm Alarm Alarm")
+                    ), Alarmdate - current);
+                }
+
+                else { console.log("Enter date in future time");}
+            }
+
+            else { console.log("Enter a valid input Number only");}
+        } 
+
+
+            Alarmclock(Number(hour), Number(minutes));
+
+    </script>
+</body>
+
+</html>

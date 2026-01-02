@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function options() {
+        let option = Number(prompt(`
+        Enter 1 for Add an Task
+        Enter 2 for Removing an Task
+        Enter 3 for View Added Task
+        Enter 4 for exit
+        `));
+        }
+
+        function TodoApp() {
+            let i = 1;
+            while (i > 0) {
+
+                if (dop < 5 && dop > 0) {
+
+                    if (dop === 1) {
+                        options();
+                        let addition = [prompt("Enter a Task to add to List")];
+                    }
+                    else if (dop === 2) {
+                        removal();
+                    }
+                    else if (dop === 3) {
+                        displayWindow(addition);
+                    }
+                    else if (dop === 4) {
+                        console.log("Exit SuccessFully");
+                        break;
+                    }
+
+                }
+                else {
+                    console.log("Enter valid option only ");
+                }
+
+                i++;
+            }
+        }
+
+
+        function displayWindow(add) {
+            for (let i = 0; i < add.length; i++) {
+                console.log(add[i]);
+            }
+        }
+
+        function removal() {
+            let removal = Number(prompt("Enter a Task Number to remove from the List"));
+            addition.filter(n => (i + 1));
+
+        }
+
+        // TodoApp();
+
+    </script>
+</body>
+
+</html>
